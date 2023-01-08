@@ -1,7 +1,7 @@
 from collections import deque
 import sys
 
-num = int(sys.stdin.readline())
+num = int(input())
 
 dq = deque()
 
