@@ -1,12 +1,13 @@
 from collections import deque
 N = int(input())
 
+
 arr=[list(map(int,input().split())) for _ in range(N)]
 
 
 def bfs(start,end):
-    deq = deque()
     visited = [0 for i in range(N)]
+    deq = deque()
     deq.append(start)
     while len(deq)!=0:
         current = deq.popleft()
