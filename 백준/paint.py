@@ -1,20 +1,3 @@
-def binary_search(target, data):
-    start = 0
-    end = len(data) - 1
-    while start <= end:
-        mid = (start + end)
-
-        if data[mid] == target:
-            return mid
-
-        elif data[mid] < target:
-            start = mid + 1
-        
-        else:
-            end = mid - 1
-    
-    return -1
-
 def solution(n, m, section):
     answer = 0
     
@@ -32,32 +15,15 @@ def solution(n, m, section):
     
         answer += 1
         for i in range(start, start+m): # 예외처리 해줘야 할듯
-            if(1<i<100000):
-
-        #     if i in section:
-        #         section.remove(i)
-                index = binary_search(i, section)
-
-                if(i>n):
-                    index = -1
-                if(index !=-1):
-                    # section.remove[index]
-                    del section[index]
-            
+            if i in section:
+                section.remove(i)
 
         if(len(section) != 0):
             answer += 1
             for i in range(end-m+1, end+1): # 예외처리 해줘야 할듯
-                if(1<i<100000):
-                    index = binary_search(i, section)
-
-                    if(i>n):
-                        index = -1
-
-                    if(index !=-1):
-                        # section.remove[index]
-                        del section[index]
+                if i in section:
+                    section.remove(i)
     
     return answer
 
-print(solution(19, 4, [2,5,8,12,15]))
+print(solution(19, 4, [2,5,8,12,15,19]))
