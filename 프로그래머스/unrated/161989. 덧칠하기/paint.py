@@ -18,3 +18,4 @@ def solution(n, m, section):
     return answer
 
 print(solution(19, 4, [2,5,8,12,15,19]))
+
