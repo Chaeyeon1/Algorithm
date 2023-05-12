@@ -1,11 +1,10 @@
 import math
 
 N = int(input())
-arr = [i+1 for i in range(N)]
 
-while(len(arr)>1):
-    index = math.ceil(len(arr)/2)
-    for i in range(int(index)):
-        del arr[i]
+i = 1
+for i in range(N):
+    if i * 2 < N:
+        i = i * 2
 
-print(arr[0])
+print(i)
