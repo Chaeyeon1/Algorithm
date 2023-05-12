@@ -1,10 +1,14 @@
-import math
+from collections import deque
+
+deque = deque()
 
 N = int(input())
-
-i = 1
 for i in range(N):
-    if i * 2 < N:
-        i = i * 2
+    deque.append(i+1)
 
-print(i)
+while (len(deque)>1):
+    deque.popleft()
+    rightMove = deque.popleft()
+    deque.append(rightMove)
+
+print(deque[0])
