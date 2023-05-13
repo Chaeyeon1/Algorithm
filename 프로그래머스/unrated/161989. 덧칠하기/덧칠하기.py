@@ -1,18 +1,11 @@
 def solution(n, m, section):
     answer = 0
+    start = 0
     
-    arr = [0 for _ in range(n+1)]
     for i in section:
-        arr[i] = 1
-    
-    paint = 0
-
-    while(paint<=n):
-        if(arr[paint] == 1):
+        if start < i :
+            start = i + m - 1
             answer += 1
-
-            paint+= m
-        else:
-            paint += 1
-   
+    
+    
     return answer
