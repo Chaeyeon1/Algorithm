@@ -9,9 +9,7 @@ def solution(s, skip, index):
             number += 1
             if chr(number) > 'z':
                 number = ord('a')
-            if chr(number) in skip:
-                print(chr(number))
-            else :
+            if chr(number) not in skip:
                 j += 1
         
         answer += chr(number)
