@@ -1,6 +1,5 @@
 def solution(s, skip, index):
     answer = ""
-    number = 0
     
     for i in s:
         number = ord(i)
@@ -13,4 +12,5 @@ def solution(s, skip, index):
                 j += 1
         
         answer += chr(number)
+    
     return answer
