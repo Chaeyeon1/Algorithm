@@ -12,6 +12,5 @@ function solution(s) {
         answer += String.fromCharCode(arr[i])
     }
     
-    console.log(arr)
     return answer;
 }
