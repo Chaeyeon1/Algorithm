@@ -1,9 +1,3 @@
 function solution(absolutes, signs) {
-    var answer = 0;
-    
-    absolutes.map((absolute, i) => {
-        signs[i]? answer+= absolute : answer -= absolute
-    })
-    
-    return answer;
+    return absolutes.reduce((acc, val, i) => {return acc + (val * (signs[i] ? 1 : -1))}, 0);
 }
